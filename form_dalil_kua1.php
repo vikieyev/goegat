@@ -5,35 +5,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <?php
-if(isset($_POST['next_id_pemohon']))
+if(isset($_POST['next_id_tggt']))
 {
 	ini_set('session.cache_limiter','public');
 	session_cache_limiter(false);
 	session_start();
-	///$_SESSION['pengadilan_agama'] = "pengadilan agama";
-	//$_SESSION['pilihan'] = $_GET['text_pengadilan_agama'];	
+	$_SESSION['bin_binti_tggt'] = $_POST['binti_tggt'];
+	$_SESSION['nama_ktp_tggt'] = $_POST['nama_ktp_2'];
+	$_SESSION['tempat_lahir_tggt'] = $_POST['tempat_lahir_tggt'];
+	$_SESSION['tanggal_lahir_tggt'] = $_POST['tanggal_lahir_tggt'];
+	$_SESSION['umur_tggt'] = $_POST['umur_tggt'];
+	$_SESSION['jenis_kelamin_tggt'] = $_POST['jenis_kelamin_tggt'];
+	$_SESSION['agama_tggt'] = $_POST['agama_tggt'];
+	$_SESSION['warganegara_tggt'] = $_POST['warganegara_tggt'];
+	$_SESSION['jalan_ktp_tggt'] = $_POST['jalan_ktp_tggt'];
+	$_SESSION['rt_ktp_tggt'] = $_POST['rt_ktp_tggt'];
+	$_SESSION['rw_ktp_tggt'] = $_POST['rw_ktp_tggt'];
+	$_SESSION['kel_desa_ktp_tggt'] = $_POST['kel_desa_ktp_tggt'];
+	$_SESSION['kec_ktp_tggt'] = $_POST['kec_ktp_tggt'];
+	$_SESSION['kab_ktp_tggt'] = $_POST['kab_ktp_tggt'];
+	$_SESSION['prov_ktp_tggt'] = $_POST['prov_ktp_tggt'];
+	$_SESSION['almt_skrg_tggt'] = $_POST['jalan_skrg_tggt'];
+	$_SESSION['rt_skrg_tggt'] = $_POST['rt_skrg_tggt'];
+	$_SESSION['rw_skrg_tggt'] = $_POST['rw_skrg_tggt'];
+	$_SESSION['kel_desa_skrg_tggt'] = $_POST['kel_desa_skrg_tggt'];
+	$_SESSION['kec_skrg_tggt'] = $_POST['kec_skrg_tggt'];
+	$_SESSION['kab_skrg_tggt'] = $_POST['kab_skrg_tggt'];
+	$_SESSION['prov_skrg_tggt'] = $_POST['prov_skrg_tggt'];
+	$_SESSION['pekerjaan_tggt'] = $_POST['pekerjaan_tggt'];
+	$_SESSION['pengadilan_tggt'] = $_POST['pendidikan_tggt'];
+	$_SESSION['status_kawin_tggt'] = $_POST['status_kawin_tggt'];
 	
-	//$_SESSION['pengadilan_agama'] = "pengadilan agama";
-	//$_SESSION['pilihan_pemohon'] = $_POST['opt_pilihan_pemohon'];
-	$_SESSION['nama_ktp_pnggt'] = $_POST['nama_ktp'];
-	$_SESSION['tempat_lahir_pggt'] = $_POST['tempat_lahir'];
-	$_SESSION['tanggal_lahir_pggt'] = $_POST['tanggal_lahir'];
-	$_SESSION['umur_pggt'] = $_POST['umur'];
-	$_SESSION['jenis_kelamin_pggt'] = $_POST['jenis_kelamin'];
-	$_SESSION['agama_pggt'] = $_POST['agama'];
-	$_SESSION['warganegara_pggt'] = $_POST['warganegara'];
-	
-	
-	
-	
-	echo "pengadilan : ". $_SESSION['pengadilan_agama'] ;
-	echo nl2br ("\n");
-	echo "kab/kota : ". $_SESSION['pilihan'];
-	echo nl2br ("\n");
-	echo "pilihan pemohon : ". $_SESSION['pilihan_pemohon'];
-	echo nl2br ("\n");
-	echo "nama pemohon : ". $_SESSION['nama_ktp_pggt'];
-	echo nl2br ("\n");
 	
 
 }
@@ -67,7 +69,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<label class="head">Masukan tanggal dilangsungkannya pernikahan sesuai dengan Surat Nikah</label>
 				<input type="text" name="dalil_tgl_nikah" placeholder="" required="">
 			</div>
-			<!--
+			<!-
 			<div class="w3l-user">
 				<label class="head">Tempat KUA pencatat pernikahan</label>				
 			</div>
@@ -159,7 +161,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="w3l-rem">
 					
 				<div class="btn">
-					<input type="submit" name="submit" value="next"/>
+					<input type="submit" name="next_dalil_kua" value="next"/>
 				</div>
 			</div>
 			<div class="clear"></div>

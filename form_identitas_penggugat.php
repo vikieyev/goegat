@@ -18,6 +18,8 @@ if(isset($_POST['next_pilihan_pemohon']))
 	
 	echo "pengadilan : ". $_SESSION['pengadilan_agama'] ;
 	echo nl2br ("\n");
+	echo "pengadilan : ". $_SESSION['pengadilan_negeri'] ;
+	echo nl2br ("\n");
 	echo "kab/kota : ". $_SESSION['pilihan'];
 	echo nl2br ("\n");
 	echo "pilihan pemohon : ". $_SESSION['pilihan_pemohon'];
@@ -56,7 +58,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<label class="head">nama sesuai ktp</label>
 				<input type="text" name="nama_ktp" placeholder="" required="" value="<?php echo ($_GET['nama_ktp']); ?>">
 			</div>
-			<!--
+			<
 			<div class="w3l-user">
 				<label class="head">binti/bin</label>
 				<input type="text" name="binti" placeholder="" required="">

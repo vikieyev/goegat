@@ -5,12 +5,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <?php
-if(isset($_POST['next_form_anak']))
+if(isset($_POST['next_id_pemohon']))
 {
 	ini_set('session.cache_limiter','public');
 	session_cache_limiter(false);
 	session_start();
-	
 }
 ?>
 
@@ -34,43 +33,20 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
 
 <body>
-	<h1>FORM DALIL/ALASAN CERAI</h1>
+	<h1>FORM PEMBAYARAN</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
-		<form action="bayar_pa.php" method="post">	
-			
+		<form action="report.php" method="post">	
 			<div class="w3l-user">
-				<label class="head">awal mula selisih</label>
-				<input type="text" name="tgl_awal_mula_selisih" placeholder="hari/bulan/tahun" required="" >
+				<label class="head">email anda</label>
+				<input type="text" name="email_user" placeholder="" required="" >
 			</div>
-			
-			<div class="w3l-rem">
-				<div class="w3l-right">
-					<label class="w3l-set2">Alasan perselisihan / pertengkaran disebabkan.</label>
-					<textarea name="txt_alasan_perselisihan"></textarea>
-				</div>	
-			<div class="clear"></div>
-
-			<div class="w3l-user">
-				<label class="head">Puncak perselisihan / pertengkaran bulan dan tahun</label>
-				<input type="text" name="tgl_puncak_selisih" placeholder="hari/bulan/tahun" required="" >
-			</div>
-			<div class="w3l-user">
-				<label class="head">Pisah ranjang sejak</label>
-				<input type="text" name="tgl_pisah_ranjang" placeholder="hari/bulan/tahun" required="" >
-			</div>
-			<div class="w3l-rem">
-				<div class="w3l-right">
-					<label class="w3l-set2">Alasan Pisah ranjang.</label>
-					<textarea name="txt_alasan_psh_ranjang"></textarea>
-				</div>	
-				
 			<div class="clear"></div>
 			
 			<div class="w3l-rem">
 					
 				<div class="btn">
-					<input type="submit" name="submit" value="next"/>
+					<input type="submit" name="proses" value="proses"/>
 				</div>
 			</div>
 			<div class="clear"></div>

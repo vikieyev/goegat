@@ -3,6 +3,20 @@ author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+
+<?php
+
+if(isset($_POST['signin2']))
+{
+	ini_set('session.cache_limiter','public');
+	session_cache_limiter(false);
+	session_start();
+	$_SESSION['pengadilan_negeri'] = "pengadilan negeri";
+	#$_SESSION['pilihan'] = $_POST['text_pengadilan_agama'];	
+}
+
+?>	
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,15 +52,34 @@ if($_SESSION['status'] !="login"){
 	<h1>FORM GUGAT CERAI</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
-		<form action="#" method="post">	
-			<div class="w3l-user">
-				<label class="head">pengadilan agama</label>
-				<input type="text" name="pengadilan_agama" placeholder="" required="">			
-							<div class="btn">
-					<input type="submit" name="submit" value="Book Appointment"/>
+		<form action="form_identitas_penggugat.php" method="post">	
+			
+				<label class="head">Pilihan</label>
+				
+				<div class="w3l-details3">
+				
+				<div class="w3l-options1">
+					<select class="category1" required="" name="opt_pilihan_pemohon" >
+						<option value="">pilih pemohon</option>
+						<option value="PENGGUGAT LAKI-LAKI">pemohon laki-laki / suami</option>
+						<option value="PENGGUGAT PEREMPUAN">pemohon wanita / istri</option>
+					</select>
 				</div>
+				</div>
+				<div class="clear"></div>
+				<div class="btn">
+					<input type="submit" name="next_pilihan_pemohon" value="next"/>
+				</div>
+				
+				
+				
 			</div>
 			<div class="clear"></div>
+		</form>
+		<form action="report.php" method="post" target="_blank">
+			<div class="btn" >
+					<input type="submit" name="preview" value="preview"/>
+			</div>
 		</form>
 	</div>
 </div>

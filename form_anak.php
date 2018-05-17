@@ -5,36 +5,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <?php
-if(isset($_POST['next_id_pemohon']))
+if(isset($_POST['next_dalil_kua']))
 {
 	ini_set('session.cache_limiter','public');
 	session_cache_limiter(false);
 	session_start();
-	///$_SESSION['pengadilan_agama'] = "pengadilan agama";
-	//$_SESSION['pilihan'] = $_GET['text_pengadilan_agama'];	
 	
-	//$_SESSION['pengadilan_agama'] = "pengadilan agama";
-	//$_SESSION['pilihan_pemohon'] = $_POST['opt_pilihan_pemohon'];
-	$_SESSION['nama_ktp_pnggt'] = $_POST['nama_ktp'];
-	$_SESSION['tempat_lahir_pggt'] = $_POST['tempat_lahir'];
-	$_SESSION['tanggal_lahir_pggt'] = $_POST['tanggal_lahir'];
-	$_SESSION['umur_pggt'] = $_POST['umur'];
-	$_SESSION['jenis_kelamin_pggt'] = $_POST['jenis_kelamin'];
-	$_SESSION['agama_pggt'] = $_POST['agama'];
-	$_SESSION['warganegara_pggt'] = $_POST['warganegara'];
+	$_SESSION['dalil_tgl_nikah'] = $_POST['dalil_tgl_nikah'];
+	$_SESSION['dalil_kecamatan'] = $_POST['dalil_kecamatan'];
+	$_SESSION['dalil_kabupaten'] = $_POST['dalil_kabupaten'];
+	$_SESSION['no_akta_nikah'] = $_POST['no_akta_nikah'];
+	$_SESSION['tgl_akta_nikah'] = $_POST['tgl_akta_nikah'];
+	$_SESSION['status_penggugat'] = $_POST['status_penggugat'];
+	$_SESSION['status_tergugat'] = $_POST['status_tergugat'];
+	$_SESSION['status_penggugat'] = $_POST['status_penggugat'];
+	$_SESSION['opt_tmpt_tgl_bersama_stlh_nikah'] = $_POST['opt_tmpt_tgl_bersama_stlh_nikah'];
+	$_SESSION['lama_tahun'] = $_POST['lama_tahun'];
+	$_SESSION['lama_bulan'] = $_POST['lama_bulan'];
+	$_SESSION['jalan_stlh_nikah'] = $_POST['jalan_stlh_nikah'];
+	$_SESSION['rt_stlh_nikah'] = $_POST['rt_stlh_nikah'];
+	$_SESSION['rw_stlh_nikah'] = $_POST['rw_stlh_nikah'];
+	$_SESSION['kel_stlh_nikah'] = $_POST['kel_stlh_nikah'];
+	$_SESSION['kec_stlh_nikah'] = $_POST['kec_stlh_nikah'];
+	$_SESSION['kab_stlh_nikah'] = $_POST['kab_stlh_nikah'];
+	$_SESSION['prov_stlh_nikah'] = $_POST['prov_stlh_nikah'];
 	
-	
-	
-	
-	echo "pengadilan : ". $_SESSION['pengadilan_agama'] ;
-	echo nl2br ("\n");
-	echo "kab/kota : ". $_SESSION['pilihan'];
-	echo nl2br ("\n");
-	echo "pilihan pemohon : ". $_SESSION['pilihan_pemohon'];
-	echo nl2br ("\n");
-	echo "nama pemohon : ". $_SESSION['nama_ktp_pggt'];
-	echo nl2br ("\n");
-	
+
 
 }
 ?>
@@ -140,7 +136,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="w3l-rem">
 					
 				<div class="btn">
-					<input type="submit" name="submit" value="next"/>
+					<input type="submit" name="next_form_anak" value="next"/>
 				</div>
 			</div>
 			<div class="clear"></div>

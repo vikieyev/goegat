@@ -56,12 +56,14 @@ session_destroy();
                 </div>
                 
                 <br>
+				<!--
 			<div class="field-group">
                     
                     <div class="wthree-field">
                         <input name="text_pengadilan_agama" id="text_pengadilan_agama" type="text" value="<?php echo htmlspecialchars($_GET['text_pengadilan_agama']); ?>" placeholder="nama kabupaten" required>
                     </div>
                 </div>
+				-->
             </form>
             <br>
 			
@@ -71,14 +73,16 @@ session_destroy();
 					<td><input type="submit" name="signin2" value="pengadilan negeri" /></td>
 			</div>
 			<br>
+			<!--
 			<div class="field-group">
                     
                     <div class="wthree-field">
                         <input name="text_pengadilan_negeri" id="text_pengadilan_negeri" type="text" "value="" placeholder="nama kabupaten" required>
                     </div>
                 </div>
+				-->
 			</form>
-
+			
             
         </div>
     </div>
