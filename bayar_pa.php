@@ -5,11 +5,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
 <?php
-if(isset($_POST['next_id_pemohon']))
+if(isset($_POST['next_awal_mula_selisih']))
 {
 	ini_set('session.cache_limiter','public');
 	session_cache_limiter(false);
 	session_start();
+	$_SESSION['tgl_awal_mula_selisih'] = $_POST['tgl_awal_mula_selisih'];
+	$_SESSION['txt_alasan_perselisihan'] = $_POST['txt_alasan_perselisihan'];
+	$_SESSION['tgl_puncak_selisih'] = $_POST['tgl_puncak_selisih'];
+	$_SESSION['tgl_pisah_ranjang'] = $_POST['tgl_pisah_ranjang'];
+	$_SESSION['txt_alasan_psh_ranjang'] = $_POST['txt_alasan_psh_ranjang'];
 }
 ?>
 
@@ -36,7 +41,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<h1>FORM PEMBAYARAN</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
-		<form action="report.php" method="post">	
+		<form action="form_konfirmasi.php" method="post" target="_blank">	
 			<div class="w3l-user">
 				<label class="head">email anda</label>
 				<input type="text" name="email_user" placeholder="" required="" >
@@ -46,9 +51,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="w3l-rem">
 					
 				<div class="btn">
-					<input type="submit" name="proses" value="proses"/>
+					<input type="submit" name="proses" value="proses "  />
 				</div>
 			</div>
+			
 			<div class="clear"></div>
 			<div class="w3l-rem">
 					
@@ -57,6 +63,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 			</div>
 		</form>
+		
 	</div>
 </div>
 	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>

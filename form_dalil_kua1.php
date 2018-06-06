@@ -33,7 +33,7 @@ if(isset($_POST['next_id_tggt']))
 	$_SESSION['kab_skrg_tggt'] = $_POST['kab_skrg_tggt'];
 	$_SESSION['prov_skrg_tggt'] = $_POST['prov_skrg_tggt'];
 	$_SESSION['pekerjaan_tggt'] = $_POST['pekerjaan_tggt'];
-	$_SESSION['pengadilan_tggt'] = $_POST['pendidikan_tggt'];
+	$_SESSION['pendidikan_tggt'] = $_POST['pendidikan_tggt'];
 	$_SESSION['status_kawin_tggt'] = $_POST['status_kawin_tggt'];
 	
 	
@@ -69,7 +69,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<label class="head">Masukan tanggal dilangsungkannya pernikahan sesuai dengan Surat Nikah</label>
 				<input type="text" name="dalil_tgl_nikah" placeholder="" required="">
 			</div>
-			<!-
+			<-
 			<div class="w3l-user">
 				<label class="head">Tempat KUA pencatat pernikahan</label>				
 			</div>
@@ -172,6 +172,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 			</div>
 		</form>
+		<!--
+		<form action="report_2.php" method="post" target="_blank">
+			<div class="btn" >
+					<input type="submit" name="preview" value="preview"/>
+			</div>
+		</form>
+		-->
 	</div>
 </div>
 	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>

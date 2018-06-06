@@ -81,11 +81,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			<div class="clear"></div>
 		</form>
-		<form action="report.php" method="post" target="_blank">
+		<!--
+		<form action="report_2.php" method="post" target="_blank">
 			<div class="btn" >
 					<input type="submit" name="preview" value="preview"/>
 			</div>
 		</form>
+		-->
 		
 	</div>
 </div>

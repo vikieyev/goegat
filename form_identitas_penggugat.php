@@ -117,31 +117,31 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			<div class="w3l-user">
 				<label class="head">alamat sekarang</label>
-				<input type="text" name="jalan_skrg" placeholder="" required="">
+				<input type="text" name="jalan_skrg" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">rt sekarang</label>
-				<input type="text" name="rt_skrg" placeholder="" required="">
+				<input type="text" name="rt_skrg" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">rw sekarang</label>
-				<input type="text" name="rw_skrg" placeholder="" required="">
+				<input type="text" name="rw_skrg" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">kel/desa sekarang</label>
-				<input type="text" name="kel_desa_skrg" placeholder="" required="">
+				<input type="text" name="kel_desa_skrg" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">kecamatan sekarang</label>
-				<input type="text" name="kec_skrg" placeholder="" required="">
+				<input type="text" name="kec_skrg" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">kabupaten sekarang</label>
-				<input type="text" name="kab_skrg" placeholder="" required="">
+				<input type="text" name="kab_skrg" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">provinsi sekarang</label>
-				<input type="text" name="prov_skrg" placeholder="" required="">
+				<input type="text" name="prov_skrg" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">pekerjaan</label>
@@ -171,6 +171,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 			</div>
 		</form>
+		<!--
+		<form action="report_2.php" method="post" target="_blank">
+			<div class="btn" >
+					<input type="submit" name="preview" value="preview"/>
+			</div>
+		</form>
+		-->
 	</div>
 </div>
 	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>

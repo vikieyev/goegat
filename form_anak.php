@@ -147,6 +147,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 			</div>
 		</form>
+		<!--
+		<form action="report_2.php" method="post" target="_blank">
+			<div class="btn" >
+					<input type="submit" name="preview" value="preview"/>
+			</div>
+		</form>
+		-->
 	</div>
 </div>
 	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>

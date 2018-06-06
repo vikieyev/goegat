@@ -11,6 +11,16 @@ if(isset($_POST['next_form_anak']))
 	session_cache_limiter(false);
 	session_start();
 	
+	$_SESSION['opt_anak_dari_nikah'] = $_POST['opt_anak_dari_nikah'];
+	$_SESSION['nama_anak_1'] = $_POST['nama_anak_1'];
+	$_SESSION['nama_anak_2'] = $_POST['nama_anak_2'];
+	$_SESSION['nama_anak_3'] = $_POST['nama_anak_3'];
+	$_SESSION['tgl_lhr_anak_1'] = $_POST['tgl_lhr_anak_1'];
+	$_SESSION['tgl_lhr_anak_2'] = $_POST['tgl_lhr_anak_2'];
+	$_SESSION['tgl_lhr_anak_3'] = $_POST['tgl_lhr_anak_3'];
+	$_SESSION['jns_klmn_anak_1'] = $_POST['jns_klmn_anak_1'];
+	$_SESSION['jns_klmn_anak_2'] = $_POST['jns_klmn_anak_2'];
+	$_SESSION['jns_klmn_anak_3'] = $_POST['jns_klmn_anak_3'];
 }
 ?>
 
@@ -70,7 +80,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="w3l-rem">
 					
 				<div class="btn">
-					<input type="submit" name="submit" value="next"/>
+					<input type="submit" name="next_awal_mula_selisih" value="next"/>
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -81,6 +91,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 			</div>
 		</form>
+		<!--
+		<form action="report_2.php" method="post" target="_blank">
+			<div class="btn" >
+					<input type="submit" name="preview" value="preview"/>
+			</div>
+		</form>
+		-->
 	</div>
 </div>
 	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>

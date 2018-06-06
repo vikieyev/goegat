@@ -37,9 +37,9 @@ if(isset($_POST['next_id_pemohon']))
 	$_SESSION['kec_skrg_pggt'] = $_POST['kec_skrg'];
 	$_SESSION['kab_skrg_pggt'] = $_POST['kab_skrg'];
 	$_SESSION['prov_skrg_pggt'] = $_POST['prov_skrg'];
-	$_SESSION['pekerjaan_pggt'] = $_POST['pekerjaan_pggt'];
-	$_SESSION['pengadilan_pggt'] = $_POST['pendidikan_pggt'];
-	$_SESSION['status_kawin_pggt'] = $_POST['status_kawin_pggt'];
+	$_SESSION['pekerjaan_pggt'] = $_POST['pekerjaan'];
+	$_SESSION['pendidikan_pggt'] = $_POST['pendidikan'];
+	$_SESSION['status_kawin_pggt'] = $_POST['status_kawin'];
 	
 	
 	
@@ -144,43 +144,43 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			<div class="w3l-user">
 				<label class="head">alamat sekarang</label>
-				<input type="text" name="jalan_skrg_tggt" placeholder="" required="">
+				<input type="text" name="jalan_skrg_tggt" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">rt sekarang</label>
-				<input type="text" name="rt_skrg_tggt" placeholder="" required="">
+				<input type="text" name="rt_skrg_tggt" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">rw sekarang</label>
-				<input type="text" name="rw_skrg_tggt" placeholder="" required="">
+				<input type="text" name="rw_skrg_tggt" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">kel/desa sekarang</label>
-				<input type="text" name="kel_desa_skrg_tggt" placeholder="" required="">
+				<input type="text" name="kel_desa_skrg_tggt" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">kecamatan sekarang</label>
-				<input type="text" name="kec_skrg_tggt" placeholder="" required="">
+				<input type="text" name="kec_skrg_tggt" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">kabupaten sekarang</label>
-				<input type="text" name="kab_skrg_tggt" placeholder="" required="">
+				<input type="text" name="kab_skrg_tggt" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">provinsi sekarang</label>
-				<input type="text" name="prov_skrg_tggt" placeholder="" required="">
+				<input type="text" name="prov_skrg_tggt" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">pekerjaan</label>
-				<input type="text" name="pekerjaan_tggt" placeholder="" required="">
+				<input type="text" name="pekerjaan_tggt" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">pendidikan</label>
-				<input type="text" name="pendidikan_tggt" placeholder="" required="">
+				<input type="text" name="pendidikan_tggt" placeholder="" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">status kawin</label>
-				<input type="text" name="status_kawin_tggt" placeholder="" required="">
+				<input type="text" name="status_kawin_tggt" placeholder="" >
 			</div>
 			
 			-->	
@@ -198,6 +198,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 			</div>
 		</form>
+		<!--
+		<form action="report_2.php" method="post" target="_blank">
+			<div class="btn" >
+					<input type="submit" name="preview" value="preview"/>
+			</div>
+		</form>
+		-->
 	</div>
 </div>
 	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>

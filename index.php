@@ -73,6 +73,9 @@ session_destroy();
 					<td><input type="submit" name="signin2" value="pengadilan negeri" /></td>
 			</div>
 			<br>
+			
+			
+
 			<!--
 			<div class="field-group">
                     
@@ -82,7 +85,14 @@ session_destroy();
                 </div>
 				-->
 			</form>
-			
+			<br>
+
+			<form action="form_download_doc.php" method="post">
+            <div class="wthree-field">
+
+					<td><input type="submit" name="donload_doc" value="download doc" /></td>
+			</div>
+			<br>
             
         </div>
     </div>

@@ -1,21 +1,29 @@
 <?php
-    header("Content-type: application/vnd.ms-word");
-    header("Content-Disposition: attachment; Filename=coba.doc");
+    #header("Content-type: application/vnd.ms-word");
+    #header("Content-Disposition: attachment; Filename=coba.doc");
 ?>
 
 <?php
-if(isset($_POST['preview']))
+if(isset($_POST['proses']))
 {
 	session_start();
-	$_SESSION['pilihan_pemohon'] = $_POST['opt_pilihan_pemohon'];
-	echo "pengadilan : ". $_SESSION['pengadilan_agama'] ;
-	echo nl2br ("\n");
-	echo "kab/kota : ". $_SESSION['pilihan'];
-	echo '<pre>';
-var_dump($_SESSION);
-echo '</pre>';
+	
+	#$_SESSION['email_user'] = $_POST['email_user'];
+	#$namafile = $_SESSION['email_user'];
+	#$sessionfile = fopen( "./data_user/$namafile" , "w");
+	#fputs($sessionfile, session_encode( ) );
+	#fclose($sessionfile);
+
+		
+	var_dump($_SESSION);
 }
 ?>
+
+<?php
+
+
+?>
+
 <head>
 <style type="text/css">
  p.MsoNormal

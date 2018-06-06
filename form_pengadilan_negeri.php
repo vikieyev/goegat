@@ -76,11 +76,13 @@ if($_SESSION['status'] !="login"){
 			</div>
 			<div class="clear"></div>
 		</form>
-		<form action="report.php" method="post" target="_blank">
+		<!--
+		<form action="report_2.php" method="post" target="_blank">
 			<div class="btn" >
 					<input type="submit" name="preview" value="preview"/>
 			</div>
 		</form>
+		-->
 	</div>
 </div>
 	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>
