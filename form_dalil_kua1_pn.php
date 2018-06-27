@@ -73,32 +73,15 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			<-
 			<div class="w3l-user">
-				<label class="head">Tempat KUA pencatat pernikahan</label>				
-			</div>
-			<div class="w3l-user">
-				<label class="head">kecamatan</label>
-				<input type="text" name="dalil_kecamatan" placeholder="" required="">
+				<label class="head">Tempat Catatan Sipil pencatat pernikahan</label>				
 			</div>
 			<div class="w3l-user">
 				<label class="head">kabupaten</label>
 				<input type="text" name="dalil_kabupaten" placeholder="" required="">
 			</div>
-			<div class="w3l-user" <?php
-			$style = "";
-			if ($_SESSION['pengadilan_negeri'] == "pengadilan negeri")
-			{ 
-				$style = "";
-			}
-			else
-			{
-				$style = "style='display:none;'";
-				
-			}
-			
-			echo $style; ### UNTUK IF ELSE tempat dilangsungkan pernikahan ######################
-			?>>
+			<div class="w3l-user" >
 				<label class="head">tempat dilangsungkan pernikahan</label>
-				<input type="text" name="dalil_kabupaten" placeholder="contoh:gereja bethesda" >
+				<input type="text" name="dalil_tmpt_nikah" placeholder="contoh:gereja bethesda surabaya" required="">
 			</div>
 			<div class="w3l-user">
 				<label class="head">no kutipan akta nikah</label>

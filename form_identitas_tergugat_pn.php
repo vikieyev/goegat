@@ -79,17 +79,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<h1>IDENTITAS TERGUGAT</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
-		<form action="form_dalil_kua1.php" method="post">	
+		<form action="form_dalil_kua1_pn.php" method="post">	
 			<div class="w3l-user">
 				<label class="head">nama sesuai ktp</label>
 				<input type="text" name="nama_ktp_2" placeholder="" required="">
 			</div>
-			<--
-			<div class="w3l-user">
-				<label class="head">binti/bin</label>
-				<input type="text" name="binti_tggt" placeholder="" required="">
-			</div>
-			
 			<div class="w3l-user">
 				<label class="head">tempat lahir</label>
 				<input type="text" name="tempat_lahir_tggt" placeholder="" required="">

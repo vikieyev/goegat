@@ -196,46 +196,29 @@ terhormat,</span></p>
 <span style="background: ; mso-highlight: "><?php
 ### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
 #$style = "";
-if ($_SESSION['kab_skrg_tggt'] == "")
+if ($_SESSION['kab_skrg_pggt'] == "")
 { 
-	echo $_SESSION['kab_ktp_tggt'];
+	echo $_SESSION['kab_ktp_pggt'];
 	#$style = "style='display:none;'";
-}
-else if ($_SESSION['kab_skrg_tggt'] == "" && ($_SESSION['kab_ktp_tggt'] =! $_SESSION['kab_ktp_pggt']) )
-{
-	echo $_SESSION['kab_ktp_pggt'];
-
-}
-else if ($_SESSION['keberadaan_tdk_diketahui_tggt'] == "iya" )
-{
-	echo $_SESSION['kab_ktp_pggt'];
 }
 else
 {
-	echo $_SESSION['kab_skrg_tggt'];
+	echo $_SESSION['kab_skrg_pggt'];
 } 
 ?></span><a name="_GoBack"></a></span></p>
 <p class="MsoNormal"><span lang="IN" style="mso-ansi-language:IN">di -</span><span lang="EN-ID" style="background: ; mso-highlight: "><?php
 ### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
 #$style = "";
-if ($_SESSION['kab_skrg_tggt'] == "")
+if ($_SESSION['kab_skrg_pggt'] == "")
 { 
-	echo $_SESSION['kab_ktp_tggt'];
+	echo $_SESSION['kab_ktp_pggt'];
 	#$style = "style='display:none;'";
-}
-else if ($_SESSION['kab_skrg_tggt'] == "" && ($_SESSION['kab_ktp_tggt'] =! $_SESSION['kab_ktp_pggt']) )
-{
-	echo $_SESSION['kab_ktp_pggt'];
-
-}
-else if ($_SESSION['keberadaan_tdk_diketahui_tggt'] == "iya" )
-{
-	echo $_SESSION['kab_ktp_pggt'];
 }
 else
 {
-	echo $_SESSION['kab_skrg_tggt'];
+	echo $_SESSION['kab_skrg_pggt'];
 } 
+	 
 ?></span></p>
 <p class="MsoNormal"><span lang="IN" style="mso-ansi-language:IN">&nbsp;</span></p>
 <p class="MsoNormal"><span lang="IN" style="mso-ansi-language:IN">&nbsp;</span></p>
@@ -244,7 +227,7 @@ else
 tangan dibawah ini, saya :</span></p>
 <p class="MsoNormal"><b style="mso-bidi-font-weight:normal">
 <span lang="IN" style="background: ; mso-highlight: ; mso-ansi-language: IN">
-<?php echo $_SESSION['nama_ktp_pnggt']; ?> bin <?php echo $_SESSION['bin_binti_pnggt']; ?></span></b><span lang="IN" style="mso-ansi-language:IN">, 
+<?php echo $_SESSION['nama_ktp_pnggt']; ?> binti <?php echo $_SESSION['bin_binti_pnggt']; ?></span></b><span lang="IN" style="mso-ansi-language:IN">, 
 Tempat / tanggal lahir : </span><span style="mso-ansi-language:IN"><?php echo $_SESSION['tempat_lahir_pggt']; ?></span><span lang="IN" style="mso-ansi-language:IN"><span style="background: ; mso-highlight: ">
 / <?php echo $_SESSION['tanggal_lahir_pggt']; ?></span>, Umur :
 <span style="background: ; mso-highlight: "><?php echo $_SESSION['umur_pggt']; ?></span> tahun,<span style="mso-spacerun:yes">&nbsp;
@@ -267,10 +250,11 @@ Provinsi : <span style="background: ; mso-highlight: "><?php echo $_SESSION['pro
 <p class="MsoNormal"><span lang="IN" style="mso-ansi-language:IN">Selanjutnya 
 disebut sebagai Penggugat ;</span></p>
 <p class="MsoNormal"><span lang="IN" style="mso-ansi-language:IN">Dengan ini, 
-Penggugat mengajukan Gugatan Cerai Talak terhadap Istri saya :</span></p>
+Penggugat mengajukan Gugatan Cerai terhadap </span>
+<span style="mso-ansi-language:IN">Suami</span><span lang="IN" style="mso-ansi-language:IN"> saya :</span></p>
 <p class="MsoNormal"><b style="mso-bidi-font-weight:normal">
 <span lang="IN" style="background: ; mso-highlight: ; mso-ansi-language: IN">
-<?php echo $_SESSION['nama_ktp_tggt']; ?> binti <?php echo $_SESSION['bin_binti_tggt']; ?></span></b><span lang="IN" style="mso-ansi-language:IN">, 
+<?php echo $_SESSION['nama_ktp_tggt']; ?> bin <?php echo $_SESSION['bin_binti_tggt']; ?></span></b><span lang="IN" style="mso-ansi-language:IN">, 
 Tempat / tanggal lahir : <span style="background: ; mso-highlight: ">
 <?php echo $_SESSION['tempat_lahir_tggt']; ?> / </span></span>
 <span style="background: ; mso-highlight: ; mso-ansi-language: EN-US">
@@ -330,7 +314,7 @@ if ($_SESSION['keberadaan_tdk_diketahui_tggt'] == "tidak")
 	$style = "style='display:none;'";
 	echo $style;
 }
-else 
+else
 {
 	echo $style; ### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
 }
@@ -372,11 +356,12 @@ Tanggal <b style="mso-bidi-font-weight:normal">
 <p class="listparagraph1"><span lang="IN" style="mso-ansi-language:IN">2.</span><span lang="IN" style="font-size:7.0pt;
 mso-ansi-language:IN">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
 <span lang="IN" style="mso-ansi-language:IN">Bahwa sebelum menikah Penggugat 
-(suami) berstatus <?php echo $_SESSION['status_penggugat']; ?> dan Tergugat<span style="mso-spacerun:yes">&nbsp;
-</span>(istri) berstatus <?php echo $_SESSION['status_tergugat']; ?>, kemudian perkawinan antara Penggugat dan 
+(</span><span style="mso-ansi-language:IN">istri</span><span lang="IN" style="mso-ansi-language:IN">) berstatus <?php echo $_SESSION['status_penggugat']; ?> dan Tergugat<span style="mso-spacerun:yes">&nbsp;
+</span>(</span><span style="mso-ansi-language:IN">suami</span><span lang="IN" style="mso-ansi-language:IN">) berstatus <?php echo $_SESSION['status_tergugat']; ?>, kemudian perkawinan antara Penggugat dan 
 Tergugat dilangsungkan berdasarkan kehendak kedua belah pihak dengan tujuan 
-membentuk rumah tangga yang<i style="mso-bidi-font-style:normal">sakinah, 
-mawaddah, warahmah</i> yang diridhoi oleh Allah swt ;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+membentuk rumah tangga yang</span><i style="mso-bidi-font-style:normal"><span style="mso-ansi-language:IN"> </span>
+<span lang="IN" style="mso-ansi-language:IN">sakinah, 
+mawaddah, warahmah</span></i><span lang="IN" style="mso-ansi-language:IN"> yang diridhoi oleh Allah swt ;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></p>
 <p class="listparagraph1CxSpMiddle">
 <span lang="IN" style="mso-ansi-language:IN">3.</span><span lang="IN" style="font-size:
@@ -509,8 +494,8 @@ sampai dengan sekarang, dikarenakan <b style="mso-bidi-font-weight:normal">
 </span><span lang="IN" style="mso-ansi-language:IN;mso-fareast-language:IN">
 Bahwa</span><span lang="IN" style="mso-ansi-language:IN"> atas sikap atau 
 perbuatan tergugat tersebut, penggugat merasa sangat menderita lahir batin dan 
-oleh karenanya penggugat tidak rela dan berkesimpulan bahwa tergugat adalah 
-istri yang tidak bertanggungjawab ;</span></p>
+oleh karenanya penggugat tidak rela dan berkesimpulan bahwa tergugat adalah </span>
+<span style="mso-ansi-language:IN"> suami</span><span lang="IN" style="mso-ansi-language:IN"> yang tidak bertanggungjawab ;</span></p>
 <p class="listparagraph1"><span lang="IN" style="mso-ansi-language:IN">8.</span><span lang="IN" style="font-size:7.0pt;
 mso-ansi-language:IN">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang="EN-ID">Bahwaikatan</span> <span lang="EN-ID">perkawinan</span> <span lang="EN-ID">antara</span> <span lang="EN-ID">Penggugat 
 dan Tergugat</span>
@@ -527,7 +512,7 @@ biaya perkara;</span></p>
 
 <div class="MsoNormal" <?php 
 $style = "";
-if ($_SESSION['nama_anak_1'] == "")
+if ($_SESSION['permohonan_nafkah_anak'] == "tidak")
 { 
 	#echo $_SESSION['kab_ktp_pggt'];
 	$style = "style='display:none;'";
@@ -537,12 +522,82 @@ echo $style; ### UNTUK IF ELSE anak dari pernikahan hak asuuuh  ################
 ?>>
 
 <p class="listparagraph1CxSpLast">
-<span lang="IN" style="mso-themecolor:text1;mso-ansi-language:IN" class="auto-style3">10.</span><span lang="IN" style="font-size:7.0pt;mso-themecolor:text1;
-mso-ansi-language:IN" class="auto-style3">&nbsp; </span>
-<span lang="IN" style="mso-themecolor:text1;mso-ansi-language:IN" class="auto-style3">Bahwa untuk 
-menjamin kehidupan yang layak anak kami ter</span><span lang="EN-ID" style="mso-themecolor:text1" class="auto-style3">se</span><span lang="IN" style="mso-themecolor:text1;mso-ansi-language:
-IN" class="auto-style3">but, Penggugat mohon kepada Majelis Hakim untuk hak asuh anak jatuh kepada 
-Penggugat ;</span><span lang="EN-ID" style="color:#7F7F7F;mso-themecolor:text1"><o:p></o:p></span></p>
+<span lang="IN" style="mso-themecolor:text1;mso-ansi-language:IN" class="auto-style3">10.</span><span style="mso-themecolor:text1;mso-ansi-language:IN" class="auto-style3"> </span>
+
+
+<span lang="IN"  
+<?php 
+$style = "mso-ansi-language:IN";
+if ($_SESSION['nama_anak_1'] == "")
+{ 
+	$style = "style='display:none;'";
+}
+
+echo $style; ### UNTUK IF ELSE anak dari pernikahan hak asuuuh  ######################
+?>>Bahwa anak kami yang bernama
+
+<span style="background: ; mso-highlight: "><?php echo $_SESSION['nama_anak_1']; ?>,<span style="mso-spacerun:yes">&nbsp;
+</span></span><span class="auto-style3">
+<span style="background: ; mso-highlight: ">Tempat / tanggal lahir : 
+<?php echo $_SESSION['tgl_lhr_anak_1']; ?>, Jenis kelamin : <?php echo $_SESSION['jns_klmn_anak_1']; ?></span>&nbsp;
+</span>
+</span>
+<span lang="IN" 
+<?php 
+$style = "mso-ansi-language:IN";
+if ($_SESSION['nama_anak_2'] == "")
+{ 
+	$style = "style='display:none;'";
+}
+
+echo $style; ### UNTUK IF ELSE anak dari pernikahan hak asuuuh  ######################
+?>> <span style="background: ; mso-highlight: "><?php echo $_SESSION['nama_anak_2']; ?>,<span style="mso-spacerun:yes">&nbsp;
+</span></span><span class="auto-style3">
+<span style="background: ; mso-highlight: ">Tempat / tanggal lahir : 
+<?php echo $_SESSION['tgl_lhr_anak_2']; ?>, Jenis kelamin : <?php echo $_SESSION['jns_klmn_anak_2']; ?></span> &nbsp;
+</span>
+</span>
+<span lang="IN"  
+<?php 
+$style = "mso-ansi-language:IN";
+if ($_SESSION['nama_anak_3'] == "")
+{ 
+	$style = "style='display:none;'";
+}
+
+echo $style; ### UNTUK IF ELSE anak dari pernikahan hak asuuuh  ######################
+?>>
+<span style="background: ; mso-highlight: "><?php echo $_SESSION['nama_anak_3']; ?>,<span style="mso-spacerun:yes">&nbsp;
+</span></span><span class="auto-style3">
+<span style="background: ; mso-highlight: ">Tempat / tanggal lahir : 
+<?php echo $_SESSION['tgl_lhr_anak_3']; ?>, Jenis kelamin : <?php echo $_SESSION['jns_klmn_anak_3']; ?></span>
+</span>
+
+
+<span lang="IN" style="mso-ansi-language:IN">,</span></span><span lang="IN" style="mso-ansi-language:IN"> 
+sampai dengan diajukannya gugatan ini berada dalam pengasuhan Penggugat</span>,<span lang="IN" style="mso-ansi-language:IN"><span style="mso-spacerun:yes">&nbsp;
+</span>maka apabila terjadi perceraian hak asuh anak berada pada Penggugat 
+sebagai Ibu Kandungnya ;<o:p></o:p></span></p>
+
+
+
+	<p class="listparagraph1CxSpLast">
+	<o:p>11.
+	<span lang="IN" style="font-size:12.0pt;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+minor-latin;mso-bidi-theme-font:minor-bidi;mso-ansi-language:IN;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA">Bahwa untuk menjamin kehidupan yang layak anak 
+	kami tersebut, sudah sepatutnya Tergugat sebagai ayah dibebani untuk 
+	memberikan biaya nafkah/kebutuhan<span style="mso-spacerun:yes">&nbsp; </span>
+	sehari-hari dari anak kami tersebut sebesar Rp.</span><span lang="IN" style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+mso-fareast-theme-font:minor-latin;mso-bidi-theme-font:minor-bidi;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA"> </span>
+	<span lang="IN" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-theme-font:
+minor-bidi;mso-ansi-language:IN;mso-fareast-language:EN-US;mso-bidi-language:
+AR-SA"><?php echo $_SESSION['besar_nafkah_anak']; ?>,- setiap bulannya</span></o:p></p>
+
 </div>
 
 <p class="MsoNormal">
@@ -552,23 +607,14 @@ agar Ketua Pengadilan Agama</span><span style="mso-fareast-font-family:&quot;Tim
 IN"> </span><b style="mso-bidi-font-weight:normal"><span lang="EN-ID" style="background: ; mso-highlight: "><?php
 ### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
 #$style = "";
-if ($_SESSION['kab_skrg_tggt'] == "")
+if ($_SESSION['kab_skrg_pggt'] == "")
 { 
-	echo $_SESSION['kab_ktp_tggt'];
+	echo $_SESSION['kab_ktp_pggt'];
 	#$style = "style='display:none;'";
-}
-else if ($_SESSION['kab_skrg_tggt'] == "" && ($_SESSION['kab_ktp_tggt'] =! $_SESSION['kab_ktp_pggt']) )
-{
-	echo $_SESSION['kab_ktp_pggt'];
-
-}
-else if ($_SESSION['keberadaan_tdk_diketahui_tggt'] == "iya" )
-{
-	echo $_SESSION['kab_ktp_pggt'];
 }
 else
 {
-	echo $_SESSION['kab_skrg_tggt'];
+	echo $_SESSION['kab_skrg_pggt'];
 } 
 ?></span></b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
 IN"> </span><span lang="IN" style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
@@ -586,30 +632,20 @@ IN">Mengabulkan gugatan Penggugat untuk</span><span lang="IN" style="mso-bidi-fo
 <span lang="IN" style="mso-bidi-font-size:11.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
 mso-ansi-language:IN">2.</span><span lang="IN" style="font-size:7.0pt;mso-fareast-font-family:
 &quot;Times New Roman&quot;;mso-ansi-language:IN">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span><span lang="EN-ID">Menetapkan, 
-memberiijin</span> <span lang="EN-ID">kepada</span> <span lang="EN-ID">Penggugat</span> <span lang="EN-ID">untuk</span> <span lang="EN-ID">mengucapkan</span> <span lang="EN-ID">Ikrar</span> <span lang="EN-ID">Talak</span> <span lang="EN-ID">terhadap</span> <span lang="EN-ID">Tergugat</span> <span lang="EN-ID">dihadapan</span> <span lang="EN-ID">sidang</span> <span lang="EN-ID">Pengadilan 
-Agama</span><b style="mso-bidi-font-weight:normal"><span style="background: ; mso-highlight: ; mso-ansi-language: IN"> </span><span lang="IN" style="background: ; mso-highlight: ; mso-ansi-language: IN"><?php
-### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
-#$style = "";
-if ($_SESSION['kab_skrg_tggt'] == "")
-{ 
-	echo $_SESSION['kab_ktp_tggt'];
-	#$style = "style='display:none;'";
-}
-else if ($_SESSION['kab_skrg_tggt'] == "" && ($_SESSION['kab_ktp_tggt'] =! $_SESSION['kab_ktp_pggt']) )
-{
-	echo $_SESSION['kab_ktp_pggt'];
-
-}
-else if ($_SESSION['keberadaan_tdk_diketahui_tggt'] == "iya" )
-{
-	echo $_SESSION['kab_ktp_pggt'];
-}
-else
-{
-	echo $_SESSION['kab_skrg_tggt'];
-} 
-?></span></b><span lang="IN" style="mso-bidi-font-size:11.0pt;mso-fareast-font-family:Calibri;
+<span lang="IN" style="font-size:12.0pt;mso-bidi-font-size:
+11.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+mso-ansi-language:IN;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">
+Menetapkan, Menyatakan perkawinan antara Penggugat dengan Tergugat</span><span lang="IN" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">
+</span>
+<span lang="IN" style="font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">putus karena perceraian</span></span><span style="font-size:7.0pt;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:IN"><span style="font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA"> </span></span>
+<span lang="IN" style="mso-bidi-font-size:11.0pt;mso-fareast-font-family:Calibri;
 mso-ansi-language:IN">;</span><span lang="EN-ID" style="mso-fareast-font-family:
 Calibri"><o:p></o:p></span></p>
 <p class="MsoNormal">
@@ -650,7 +686,22 @@ dibawah asuhan Penggugat </span>
 <span lang="IN" style="mso-bidi-font-size:11.0pt;
 mso-fareast-font-family:Calibri;color:#BFBFBF;mso-themecolor:background1;
 mso-themeshade:191;mso-ansi-language:IN">.</span></p>
+	</span></span>
+	<span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+IN">
+	<p class="MsoNormal">5<![if !supportLists]><span lang="IN" style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:IN"><span style="mso-list:Ignore">.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</span></span></span><![endif]>
+	<span lang="IN" style="mso-bidi-font-size:11.0pt;mso-fareast-font-family:Calibri;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:IN">Menghukum 
+	Tergugat untuk memberikan kepada Penggugat nafkah anak sebesar
+	<span style="background: ; mso-highlight: ">Rp. <?php echo $_SESSION['besar_nafkah_anak']; ?>,-</span></span><span lang="IN" style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:IN"><o:p></o:p></span></p>
 </div>
+
+</span>
+<span lang="IN" style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+IN">
 
 <p class="MsoNormal">
 <span lang="IN" style="mso-fareast-font-family:&quot;Times New Roman&quot;;
@@ -670,7 +721,9 @@ yang seadil-adilnya.</span></p>
 <span lang="EN-ID" style="font-size: 14.0pt; mso-bidi-font-size: 12.0pt; background: ; mso-highlight: ">
 <?php echo $_SESSION['nama_ktp_pnggt']; ?></span></b><span style="font-size:14.0pt;
 mso-bidi-font-size:12.0pt;mso-ansi-language:IN"> </span><span lang="IN" style="font-size:14.0pt;
-mso-bidi-font-size:12.0pt;mso-ansi-language:IN">bin
+mso-bidi-font-size:12.0pt;mso-ansi-language:IN">bin</span><span lang="en-us"><span style="font-size:14.0pt;
+mso-bidi-font-size:12.0pt;mso-ansi-language:IN">ti</span></span><span lang="IN" style="font-size:14.0pt;
+mso-bidi-font-size:12.0pt;mso-ansi-language:IN">
 <b style="mso-bidi-font-weight:
 normal"><span style="background: ; mso-highlight: "><?php echo $_SESSION['bin_binti_pnggt']; ?></span></b></span><b style="mso-bidi-font-weight:normal"><span lang="IN" style="mso-ansi-language:
 IN"><o:p></o:p></span></b></p>

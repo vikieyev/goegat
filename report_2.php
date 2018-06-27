@@ -1,6 +1,6 @@
 <?php
     header("Content-type: application/vnd.ms-word");
-    header("Content-Disposition: attachment; Filename=coba.doc");
+    header("Content-Disposition: attachment; Filename={$_SESSION['nama_ktp_pnggt']}_{$_SESSION['bin_binti_pnggt']}_{$_SESSION['kec_ktp_pggt']}_{$_SESSION['kab_ktp_pggt']}.doc");
 	date_default_timezone_set('Etc/UTC');
 ?>
 
@@ -14,7 +14,7 @@ if(isset($_POST['preview']))
 	#echo nl2br ("\n");
 	#echo "kab/kota : ". $_SESSION['pilihan'];
 	#echo '<pre>';
-	$_SESSION['tanggal']= date('Y-m-d');
+	$_SESSION['tanggal']= date('d-m-Y');
 	#header('Location: report.php');
 	/*
 	$_SESSION['pengadilan_agama'] = "pengadilan agama";

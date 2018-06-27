@@ -16,14 +16,14 @@ if(isset($_POST['next_pilihan_pemohon']))
 	//$_SESSION['pengadilan_agama'] = "pengadilan agama";
 	$_SESSION['pilihan_pemohon'] = $_POST['opt_pilihan_pemohon'];	
 	
-	echo "pengadilan : ". $_SESSION['pengadilan_agama'] ;
-	echo nl2br ("\n");
-	echo "pengadilan : ". $_SESSION['pengadilan_negeri'] ;
-	echo nl2br ("\n");
-	echo "kab/kota : ". $_SESSION['pilihan'];
-	echo nl2br ("\n");
-	echo "pilihan pemohon : ". $_SESSION['pilihan_pemohon'];
-	echo nl2br ("\n");
+	#echo "pengadilan : ". $_SESSION['pengadilan_agama'] ;
+	#echo nl2br ("\n");
+	#echo "pengadilan : ". $_SESSION['pengadilan_negeri'] ;
+	#echo nl2br ("\n");
+	#echo "kab/kota : ". $_SESSION['pilihan'];
+	#echo nl2br ("\n");
+	#echo "pilihan pemohon : ". $_SESSION['pilihan_pemohon'];
+	#echo nl2br ("\n");
 	
 	
 	
@@ -50,13 +50,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
 
 <body>
-	<h1>FORM IDENTITAS PENGGUGAT</h1>
+	<h1>IDENTITAS PENGGUGAT</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
 		<form action="form_identitas_tergugat.php" method="post">	
 			<div class="w3l-user">
 				<label class="head">nama sesuai ktp</label>
-				<input type="text" name="nama_ktp" placeholder="" required="" value="<?php echo ($_GET['nama_ktp']); ?>">
+				<input type="text" name="nama_ktp" placeholder="" required="" >
 			</div>
 			<
 			<div class="w3l-user">
@@ -69,7 +69,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			<div class="w3l-user">
 				<label class="head">tanggal lahir</label>
-				<input type="text" name="tanggal_lahir" placeholder="" required="">
+				<input type="text" name="tanggal_lahir" placeholder="format tanggal-bulan-tahun" required="">
 			</div>
 			<div class="w3l-user">
 				<label class="head">umur</label>
@@ -117,31 +117,31 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			<div class="w3l-user">
 				<label class="head">alamat sekarang</label>
-				<input type="text" name="jalan_skrg" placeholder="" >
+				<input type="text" name="jalan_skrg" placeholder="abaikan jika sama dengan KTP" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">rt sekarang</label>
-				<input type="text" name="rt_skrg" placeholder="" >
+				<input type="text" name="rt_skrg" placeholder="abaikan jika sama dengan KTP" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">rw sekarang</label>
-				<input type="text" name="rw_skrg" placeholder="" >
+				<input type="text" name="rw_skrg" placeholder="abaikan jika sama dengan KTP" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">kel/desa sekarang</label>
-				<input type="text" name="kel_desa_skrg" placeholder="" >
+				<input type="text" name="kel_desa_skrg" placeholder="abaikan jika sama dengan KTP" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">kecamatan sekarang</label>
-				<input type="text" name="kec_skrg" placeholder="" >
+				<input type="text" name="kec_skrg" placeholder="abaikan jika sama dengan KTP" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">kabupaten sekarang</label>
-				<input type="text" name="kab_skrg" placeholder="" >
+				<input type="text" name="kab_skrg" placeholder="abaikan jika sama dengan KTP" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">provinsi sekarang</label>
-				<input type="text" name="prov_skrg" placeholder="" >
+				<input type="text" name="prov_skrg" placeholder="abaikan jika sama dengan KTP" >
 			</div>
 			<div class="w3l-user">
 				<label class="head">pekerjaan</label>

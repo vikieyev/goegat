@@ -54,7 +54,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 
 <body>
-	<h1>FORM GUGAT CERAI</h1>
+	<h1>GUGAT CERAI</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
 		<form action="form_identitas_penggugat.php" method="post">	
@@ -75,7 +75,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<div class="btn">
 					<input type="submit" name="next_pilihan_pemohon" value="next"/>
 				</div>
-				
+				<div class="clear"></div>
+			<div class="w3l-rem">
+					
+				<div class="btn">
+					<input type="submit" name="back" value="back" onClick="history.go(-1);"/>
+				</div>
+			</div>
+
 				
 				
 			</div>

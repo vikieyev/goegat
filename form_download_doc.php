@@ -30,7 +30,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<h1>DOWNLOAD DOKUMEN</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
-		<form action="form_download_doc_proses.php" method="post" target="_blank">	
+		<form  action="form_download_doc_proses.php" method="post" >	
 			<div class="w3l-user">
 				<label class="head">email anda</label>
 				<input type="text" name="email_user" placeholder="" required="" >

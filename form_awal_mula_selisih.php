@@ -21,6 +21,15 @@ if(isset($_POST['next_form_anak']))
 	$_SESSION['jns_klmn_anak_1'] = $_POST['jns_klmn_anak_1'];
 	$_SESSION['jns_klmn_anak_2'] = $_POST['jns_klmn_anak_2'];
 	$_SESSION['jns_klmn_anak_3'] = $_POST['jns_klmn_anak_3'];
+	
+	$_SESSION['permohonan_nafkah_anak'] = $_POST['permohonan_nafkah_anak'];
+	$_SESSION['besar_nafkah_anak'] = $_POST['besar_nafkah_anak'];
+	
+	#var_dump($_SESSION);
+	#echo "permohonan_nafkah_anak : ". $_SESSION['permohonan_nafkah_anak'];
+	#echo nl2br ("\n");
+	#echo "besar nafkah anak : ". $_SESSION['besar_nafkah_anak']; 
+	#echo nl2br ("\n");
 }
 ?>
 
@@ -47,7 +56,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<h1>FORM DALIL/ALASAN CERAI</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
-		<form action="bayar_pa.php" method="post">	
+		<form action="bayar_pa.php" method="post">
 			
 			<div class="w3l-user">
 				<label class="head">awal mula selisih</label>
@@ -58,7 +67,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<div class="w3l-right">
 					<label class="w3l-set2">Alasan perselisihan / pertengkaran disebabkan.</label>
 					<textarea name="txt_alasan_perselisihan"></textarea>
-				</div>	
+				</div>
+			</div>
 			<div class="clear"></div>
 
 			<div class="w3l-user">
@@ -74,7 +84,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<label class="w3l-set2">Alasan Pisah ranjang.</label>
 					<textarea name="txt_alasan_psh_ranjang"></textarea>
 				</div>	
-				
+			</div>
+
 			<div class="clear"></div>
 			
 			<div class="w3l-rem">

@@ -29,8 +29,7 @@ if(isset($_POST['next_dalil_kua']))
 	$_SESSION['kec_stlh_nikah'] = $_POST['kec_stlh_nikah'];
 	$_SESSION['kab_stlh_nikah'] = $_POST['kab_stlh_nikah'];
 	$_SESSION['prov_stlh_nikah'] = $_POST['prov_stlh_nikah'];
-	
-
+	$_SESSION['dalil_tmpt_nikah'] = $_POST['dalil_tmpt_nikah'];
 
 }
 ?>
@@ -55,7 +54,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
 
 <body>
-	<h1>FORM DALIL/ALASAN CERAI</h1>
+	<h1>DALIL/ALASAN CERAI</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
 		<form action="form_awal_mula_selisih.php" method="post">	
@@ -74,11 +73,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			<div class="w3l-user">
 				<label class="head">nama</label>
-				<input type="text" name="nama_anak_1" placeholder="" >
+				<input type="text" name="nama_anak_1" placeholder="tidak diisi bila tidak ada anak" >
 			</div>
 			<div class="w3l-user">
-				<label class="head">tanggal lahir</label>
-				<input type="text" name="tgl_lhr_anak_1" placeholder="" >
+				<label class="head">tempat/tanggal lahir</label>
+				<input type="text" name="tgl_lhr_anak_1" placeholder="tempat/tanggal-bulan-tahun" >
 			</div>
 			<div class="clear"></div>	
 			<label class="head">jenis kelamin</label>
@@ -95,11 +94,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			<div class="w3l-user">
 				<label class="head">nama</label>
-				<input type="text" name="nama_anak_2" placeholder="" >
+				<input type="text" name="nama_anak_2" placeholder="tidak diisi bila tidak ada anak" >
 			</div>
 			<div class="w3l-user">
-				<label class="head">tanggal lahir</label>
-				<input type="text" name="tgl_lhr_anak_2" placeholder="" >
+				<label class="head">tempat/tanggal lahir</label>
+				<input type="text" name="tgl_lhr_anak_2" placeholder="tempat/tanggal-bulan-tahun" >
 			</div>
 			<div class="clear"></div>	
 			<label class="head">jenis kelamin</label>
@@ -116,11 +115,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			<div class="w3l-user">
 				<label class="head">nama</label>
-				<input type="text" name="nama_anak_3" placeholder="" >
+				<input type="text" name="nama_anak_3" placeholder="tidak diisi bila tidak ada anak" >
 			</div>
 			<div class="w3l-user">
-				<label class="head">tanggal lahir</label>
-				<input type="text" name="tgl_lhr_anak_3" placeholder="" >
+				<label class="head">tempat/tanggal lahir</label>
+				<input type="text" name="tgl_lhr_anak_3" placeholder="tempat/tanggal-bulan-tahun" >
 			</div>
 			<div class="clear"></div>	
 			<label class="head">jenis kelamin</label>
@@ -132,7 +131,58 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</select>
 			</div>
 			
-			<div class="clear"></div>			
+			<div class="clear"><br></div>
+			
+			<div class="w3l-lef1" 
+			<?php
+			$style = "";
+			if ($_SESSION['pilihan_pemohon'] == "CERAI GUGAT" || $_SESSION['pilihan_pemohon'] == "CERAI TALAK" || $_SESSION['pilihan_pemohon'] == "PENGGUGAT LAKI-LAKI" || $_SESSION['pilihan_pemohon'] == "PENGGUGAT PEREMPUAN")
+			{ 
+				$style = "";
+			}
+			else
+			{
+				$style = "style='display:none;'";
+				
+			}
+			
+			echo $style; ### UNTUK IF ELSE NAFKAH ANAK ######################
+			?>>
+				<label class="w3l-head2">Permohonan Hak Asuh Anak<br></label>
+					<ul>
+						<li>
+							<input type="radio" name="permohonan_nafkah_anak" value="iya">
+							<label class="w3l-set">IYA</label>
+						</li>
+						<li>
+							<input type="radio" name="permohonan_nafkah_anak" value="tidak" CHECKED="On" >
+							<label class="w3l-set">TIDAK</label>
+						</li>
+					</ul>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="w3l-user" <?php
+			$style = "";
+			if ($_SESSION['pilihan_pemohon'] == "CERAI GUGAT" || $_SESSION['pilihan_pemohon'] == "PENGGUGAT PEREMPUAN")
+			{ 
+				$style = "";
+			}
+			else
+			{
+				$style = "style='display:none;'";
+				
+			}
+			
+			echo $style; ### UNTUK IF ELSE NAFKAH ANAK ######################
+			?>>
+
+				<label class="head">besar nafkah tiap anak</label>
+				<input type="text" name="besar_nafkah_anak" placeholder="kosongkan jika tidak memohon hak asuh" >
+			</div>
+
+
+			
 			<div class="w3l-rem">
 					
 				<div class="btn">

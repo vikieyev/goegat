@@ -14,12 +14,14 @@ if(isset($_POST['proses']))
 	$_SESSION['email_user'] = $_POST['email_user'];
 	$namafile = $_SESSION['email_user'];
 	
-	$sessionfile = fopen("./data_user/$namafile", "r") or die("MAAF DOKUMEN BELUM DIBAYAR");
+	$sessionfile = fopen("./data_user/$namafile", "r") or die('<body background="images/bg_gugat_cerai.jpg"> <center><h1><font style="background-color:">MAAF DOKUMEN BELUM DIBAYAR</font></h1></center> </br> <center><h1><font style="background-color:white"><a href="form_download_doc.php">Klik untuk Kembali</a></font></h1></center>  </body>');
 	session_decode(fgets($sessionfile,4096) );
 	fclose($sessionfile);
-	echo $sessionfile;
+	#echo '<a href="form_download_doc.php">Click here</a>';
+	#echo $sessionfile;
 	
-	var_dump($_SESSION);
+	#var_dump($_SESSION);
+	
 }
 ?>
 
@@ -46,41 +48,106 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<h1>DOWNLOAD DOKUMEN</h1>
 <div class="w3l-main">
 
-	<div class="w3l-from">
-	
-<!--
-		<form action="form_download_doc_proses.php" method="post" target="_blank">	
-		
-			<div class="w3l-user">
-				<label class="head">email anda</label>
+	<div class="w3l-from" 
 			
-				<input type="text" name="email_user" placeholder="" required="" >
-			</div>
-			<div class="clear"></div>
+		<?php
+			$style = "";
+			if ($_SESSION['pilihan_pemohon'] != "CERAI TALAK")
+			{ 
+				#echo $_SESSION['kab_ktp_pggt'];
+				$style = "style='display:none;'";
+			}else
+			{
+				$style = "";
+			}
 			
-			<div class="w3l-rem">
-					
-				<div class="btn">
-					<input type="submit" name="proses" value="CEK DOKUMEN "  />
-				</div>
-			</div>
-			
-			<div class="clear"></div>
-			<div class="w3l-rem">
-					
-				<div class="btn">
-					<input type="submit" name="back" value="back" onClick="history.go(-1);"/>
-				</div>
-			</div>
-			
-		</form>
-		-->
-		<form action="report_2.php" method="post" target="_blank">
+			echo $style; ### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
+			?> >
+
+		<form action="report_gugat_pa_talak_laki.php" method="post" target="_blank">
 			<div class="btn" >
 					<input type="submit" name="preview" value="download"/>
 			</div>
 		</form>
+		
 	</div>
+	<div class="w3l-from" 
+			
+		<?php
+			$style = "";
+			if ($_SESSION['pilihan_pemohon'] != "CERAI GUGAT")
+			{ 
+				#echo $_SESSION['kab_ktp_pggt'];
+				$style = "style='display:none;'";
+			}
+			else
+			{
+				$style = "";
+			}
+
+			echo $style; ### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
+			?> >
+
+		<form action="report_gugat_pa_cerai_wanita.php" method="post" target="_blank">
+			<div class="btn" >
+					<input type="submit" name="preview" value="download"/>
+			</div>
+		</form>
+		
+	</div>
+	
+	<div class="w3l-from" 
+			
+		<?php
+			$style = "";
+			if ($_SESSION['pilihan_pemohon'] != "PENGGUGAT LAKI-LAKI")
+			{ 
+				#echo $_SESSION['kab_ktp_pggt'];
+				$style = "style='display:none;'";
+			}
+			else
+			{
+				$style = "";
+			}
+
+			echo $style; ### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
+			?> >
+
+		<form action="report_gugat_pn_cerai_laki.php" method="post" target="_blank">
+			<div class="btn" >
+					<input type="submit" name="preview" value="download"/>
+			</div>
+		</form>
+		
+	</div>
+	
+	<div class="w3l-from" 
+			
+		<?php
+			$style = "";
+			if ($_SESSION['pilihan_pemohon'] != "PENGGUGAT PEREMPUAN")
+			{ 
+				#echo $_SESSION['kab_ktp_pggt'];
+				$style = "style='display:none;'";
+			}
+			else
+			{
+				$style = "";
+			}
+
+			echo $style; ### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
+			?> >
+
+		<form action="report_gugat_pn_cerai_wanita.php" method="post" target="_blank">
+			<div class="btn" >
+					<input type="submit" name="preview" value="download"/>
+			</div>
+		</form>
+		
+	</div>
+
+
+
 </div>
 	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>
 	</footer>

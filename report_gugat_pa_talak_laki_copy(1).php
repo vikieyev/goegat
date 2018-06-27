@@ -325,15 +325,13 @@ IN">;<o:p></o:p></span></p>
 
 <div class="MsoNormal" <?php 
 $style = "";
-if ($_SESSION['keberadaan_tdk_diketahui_tggt'] == "tidak")
+if ($_SESSION['kab_skrg_tggt'] != "" && $_SESSION['keberadaan_tdk_diketahui_tggt'] == "tidak")
 { 
+	#echo $_SESSION['kab_ktp_pggt'];
 	$style = "style='display:none;'";
-	echo $style;
 }
-else 
-{
-	echo $style; ### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
-}
+
+echo $style; ### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
 ?>>
 
 
