@@ -13,7 +13,11 @@ if(isset($_POST['proses']))
 		
 	$_SESSION['email_user'] = $_POST['email_user'];
 	$namafile = $_SESSION['email_user'];
-	
+	date_default_timezone_set('Etc/UTC');
+
+	$_SESSION['tanggal']= date('d-m-Y');
+
+	//$sessionfile = fopen("./data_user_bayar/$namafile", "r") or die('<body background="images/bg_gugat_cerai.jpg"> <center><h1><font style="background-color:">MAAF DOKUMEN BELUM DIBAYAR</font></h1></center> </br> <center><h1><font style="background-color:white"><a href="form_download_doc.php">Klik untuk Kembali</a></font></h1></center>  </body>');
 	$sessionfile = fopen("./data_user/$namafile", "r") or die('<body background="images/bg_gugat_cerai.jpg"> <center><h1><font style="background-color:">MAAF DOKUMEN BELUM DIBAYAR</font></h1></center> </br> <center><h1><font style="background-color:white"><a href="form_download_doc.php">Klik untuk Kembali</a></font></h1></center>  </body>');
 	session_decode(fgets($sessionfile,4096) );
 	fclose($sessionfile);
@@ -38,14 +42,21 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Meta tag Keywords -->
 <!-- css files -->
 <link rel="stylesheet" href="css/jquery-ui.css"/>
+<link rel="stylesheet" href="css/style_login.css" type="text/css" media="all">
+
 <link href="css/style_gugat_cerai.css" rel="stylesheet" type="text/css" media="all"/><!--stylesheet-css-->
 <link href="//fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><!--online-fonts-->
 <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><!--online-fonts-->
 <!-- //css files -->
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+}
+</style>
 </head>
 
 <body>
-	<h1>DOWNLOAD DOKUMEN</h1>
+	<h1 class="title-agile text-center">DOWNLOAD DOKUMEN</h1>
 <div class="w3l-main">
 
 	<div class="w3l-from" 
@@ -64,9 +75,17 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			echo $style; ### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
 			?> >
 
-		<form action="report_gugat_pa_talak_laki.php" method="post" target="_blank">
+		<form action="report_gugat_pa_talak_laki.php" method="post" id="doc_gugat_pa_laki" target="_blank">
 			<div class="btn" >
-					<input type="submit" name="preview" value="download"/>
+					<input type="submit" name="preview" value="download" />
+			</div>
+			<div class="clear"><br></div>
+			<div class="auto-style1">
+			<a href="data_doc/<?php echo $_SESSION['email_user']; ?>.doc">klik disini bila tidak terdownload</a>
+
+			<!--
+			<a href="javascript:{}" onclick="document.getElementById('doc_gugat_pa_laki').submit(); return false;">download</a>
+			-->
 			</div>
 		</form>
 		
@@ -88,10 +107,16 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			echo $style; ### UNTUK IF ELSE TEMPAT KABUPATEN DAN ALAMAT SEKARANG YG NAMPAK ######################
 			?> >
 
-		<form action="report_gugat_pa_cerai_wanita.php" method="post" target="_blank">
+		<form action="report_gugat_pa_cerai_wanita.php" method="post" target="_blank" >
 			<div class="btn" >
-					<input type="submit" name="preview" value="download"/>
+					<input type="submit" name="preview" value="download" />
 			</div>
+			<div class="clear"><br></div>
+			<div class="auto-style1">
+			<a href="data_doc/<?php echo $_SESSION['email_user']; ?>.doc">klik disini bila tidak terdownload</a>
+
+			</div>
+
 		</form>
 		
 	</div>
@@ -117,6 +142,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="btn" >
 					<input type="submit" name="preview" value="download"/>
 			</div>
+			<div class="clear"><br></div>
+			<div class="auto-style1">
+			<a href="data_doc/<?php echo $_SESSION['email_user']; ?>.doc">klik disini bila tidak terdownload</a>
+
+			</div>
+
 		</form>
 		
 	</div>
@@ -142,14 +173,28 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="btn" >
 					<input type="submit" name="preview" value="download"/>
 			</div>
+			<div class="clear"><br></div>
+			<div class="auto-style1">
+			<a href="data_doc/<?php echo $_SESSION['email_user']; ?>.doc">klik disini bila tidak terdownload</a>
+
+			</div>
+
 		</form>
+		
+		
+
 		
 	</div>
 
-
+<form  action="index.php" >
+		<div class="btn">
+					<input type="submit" name="back" value="back" onClick=""/>
+		</div>
+		</form>
 
 </div>
-	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>
+	<footer>&copy; 2018 PT.LawuSoft
+
 	</footer>
 	<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 

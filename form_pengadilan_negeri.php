@@ -29,6 +29,8 @@ if(isset($_POST['signin2']))
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Meta tag Keywords -->
 <!-- css files -->
+<link rel="stylesheet" href="css/style_login.css" type="text/css" media="all">
+
 <link rel="stylesheet" href="css/jquery-ui.css"/>
 <link href="css/style_gugat_cerai.css" rel="stylesheet" type="text/css" media="all"/><!--stylesheet-css-->
 <link href="//fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><!--online-fonts-->
@@ -49,7 +51,7 @@ if($_SESSION['status'] !="login"){
 
 
 <body>
-	<h1>GUGAT CERAI</h1>
+	<h1 class="title-agile text-center">GUGAT CERAI</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
 		<form action="form_identitas_penggugat_pn.php" method="post">	
@@ -71,18 +73,10 @@ if($_SESSION['status'] !="login"){
 					<input type="submit" name="next_pilihan_pemohon" value="next"/>
 				</div>
 				<div class="clear"></div>
-			<div class="w3l-rem">
-					
-				<div class="btn">
-					<input type="submit" name="back" value="back" onClick="history.go(-1);"/>
-				</div>
-			</div>
-
-				
-				
-			
-			<div class="clear"></div>
-		</form>
+			</form>
+		<div class="btn">
+					<input type="submit" name="back" value="back" onClick="history.back();"/>
+		</div>
 		<!--
 		<form action="report_2.php" method="post" target="_blank">
 			<div class="btn" >
@@ -92,7 +86,8 @@ if($_SESSION['status'] !="login"){
 		-->
 	</div>
 </div>
-	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>
+	<footer>&copy; 2018 PT.LawuSoft
+
 	</footer>
 	<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 

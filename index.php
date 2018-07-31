@@ -11,6 +11,8 @@ session_cache_limiter(false);
 ?>
 <?php
 session_start();
+#var_dump($_SESSION);
+
 session_destroy();
 ?>
 
@@ -49,6 +51,15 @@ session_destroy();
             <h2><span lang="en-us">pilihan</span></h2>
         </div>
         <div class="content-bottom">
+        <br>
+			<form action="panduan.php" >
+			<div class="wthree-field">
+
+					<td><input type="submit" name="panduan" value="panduan"  />  </td>
+			</div>
+			</form>
+        	<br>
+        	<br>
            <form action="form_pengadilan_agama.php" method="post">
            
                 <div class="wthree-field">
@@ -72,7 +83,7 @@ session_destroy();
 
 					<td><input type="submit" name="signin2" value="pengadilan negeri" /></td>
 			</div>
-			<br>
+			
 			
 			
 
@@ -86,18 +97,42 @@ session_destroy();
 				-->
 			</form>
 			<br>
+			<br>
 
 			<form action="form_download_doc.php" method="post">
             <div class="wthree-field">
 
 					<td><input type="submit" name="donload_doc" value="download doc" /></td>
 			</div>
+			</form>
 			<br>
+			<br>
+			<form action="androidapp/Goegat.apk" >
+			<div class="wthree-field">
+
+					<td><input type="submit" name="donload_app" value="download android app"  />  </td>
+			</div>
+			</form>
+			<br>
+			
+
             
         </div>
     </div>
-	
+	<div class="copyright text-center">
+        <p>kritik,saran dan bantuan bisa melalui 
+            <span lang="en-us"> </span> 
+            <a href="https://www.facebook.com/lawusoft">www.facebook.com/lawusoft</a>
+        </p>
+        <p>email : 
+            <span lang="en-us"> </span> 
+            <a href="mailto:goegat.rf.gd@gmail.com?subject=kesan">goegat.rf.gd@gmail.com</a>
+        </p>
+        <p> 
+            <a href="KebijakanPrivasi.php">kebijakan privasi</a>
+        </p>
 
+    </div>
 	
     </body>
 <!-- //Body -->

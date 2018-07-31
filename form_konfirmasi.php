@@ -10,13 +10,16 @@ if(isset($_POST['proses']))
 	session_start();
 	
 	$_SESSION['email_user'] = $_POST['email_user'];
+	$_SESSION['no_tlp'] = $_POST['no_tlp'];
+	//$namafile = $_SESSION['email_user']."+".$_SESSION['harga_bayar'];
 	$namafile = $_SESSION['email_user'];
+
 	$sessionfile = fopen( "./data_user/$namafile" , "w");
 	fputs($sessionfile, session_encode() );
 	fclose($sessionfile);
 
-		
-	#var_dump($_SESSION);
+	
+	var_dump($_SESSION);
 }
 ?>
 
@@ -32,21 +35,30 @@ if(isset($_POST['proses']))
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Meta tag Keywords -->
 <!-- css files -->
+<link rel="stylesheet" href="css/style_login.css" type="text/css" media="all">
+
 <link rel="stylesheet" href="css/jquery-ui.css"/>
 <link href="css/style_gugat_cerai.css" rel="stylesheet" type="text/css" media="all"/><!--stylesheet-css-->
 <link href="//fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><!--online-fonts-->
 <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><!--online-fonts-->
 <!-- //css files -->
+
 </head>
 
 <body>
-	<h1>KETERANGAN</h1>
+
+	<h1  class="title-agile text-center">KETERANGAN</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
-		<form action="index.php" >	
+		
 			<div class="w3l-user">
 				<label class="head">TERIMA KASIH</label>
-				<label class="head">SILAHKAN TRANFER PEMBAYARAN</label>
+				<label class="head">- TELAH MENGGUNAKAN APP INI</label>
+				<label class="head">- DONASI ANDA SANGAT BERARTI UNTUK MEMBANTU KAMI MENDEVELOP APP YANG BERGUNA BAGI MASYARAKAT DI MASA DEPAN</label>
+				<label class="head">- SILAHAKAN DOWNLOAD DOKUMEN ANDA DENGAN MENEKAN TOMBOL DOWNLOAD</label>
+				
+
+
 
 				<!--
 				<input type="text" name="email_user" placeholder="" required="" >
@@ -67,18 +79,28 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<input type="submit" name="back" value="back" onClick="history.go(-1);"/>
 				</div>
 			</div>
+			
 		</form>
 		-->
-		<form action="index.php" >
+		<form action="token.php" id="bayar">
+			<div class="btn" id="bayar">
+				<input type="submit" name="donasi" value="donasi"/>
+			</div>
+		</form>	
+		
+		<form action="form_download_doc.php" >
 			<div class="btn" >
-					<input type="submit" name="preview" value="awal"/>
+					<input type="submit" name="preview" value="download"/>
 			</div>
 		</form>
-	</div>
+	
 </div>
-	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>
+	<footer>&copy; 2018 PT.LawuSoft
+
 	</footer>
 	<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- script bayar -->
+	
 
 <!-- Calendar -->
 <script src="js/jquery-ui.js"></script>

@@ -46,6 +46,7 @@ if(isset($_POST['next_dalil_kua']))
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Meta tag Keywords -->
 <!-- css files -->
+<link rel="stylesheet" href="css/style_login.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/jquery-ui.css"/>
 <link href="css/style_gugat_cerai.css" rel="stylesheet" type="text/css" media="all"/><!--stylesheet-css-->
 <link href="//fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><!--online-fonts-->
@@ -54,7 +55,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
 
 <body>
-	<h1>DALIL/ALASAN CERAI</h1>
+	<h1 class="title-agile text-center" >DALIL/ALASAN CERAI</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
 		<form action="form_awal_mula_selisih.php" method="post">	
@@ -177,8 +178,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			echo $style; ### UNTUK IF ELSE NAFKAH ANAK ######################
 			?>>
 
-				<label class="head">besar nafkah tiap anak</label>
-				<input type="text" name="besar_nafkah_anak" placeholder="kosongkan jika tidak memohon hak asuh" >
+				<label class="head">besar nafkah tiap anak dalam Rupiah</label>
+				<input type="text" name="besar_nafkah_anak" placeholder=" 100000 / kosongkan jika tidak memohon hak asuh diatas" >
 			</div>
 
 
@@ -190,13 +191,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 			</div>
 			<div class="clear"></div>
-			<div class="w3l-rem">
-					
-				<div class="btn">
-					<input type="submit" name="back" value="back" onClick="history.go(-1);"/>
-				</div>
-			</div>
-		</form>
+					</form>
+		<div class="btn">
+					<input type="submit" name="back" value="back" onClick="history.back();"/>
+		</div>
 		<!--
 		<form action="report_2.php" method="post" target="_blank">
 			<div class="btn" >
@@ -206,7 +204,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		-->
 	</div>
 </div>
-	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>
+	<footer>&copy; 2018 PT.LawuSoft
+
 	</footer>
 	<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 

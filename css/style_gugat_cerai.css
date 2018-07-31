@@ -1,4 +1,4 @@
-/*
+﻿/*
 Author: W3layout
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -18,7 +18,7 @@ body a{
 	-ms-transition:0.5s all;
 	font-weight:400;
 }
-input[type="button"],input[type="submit"],input[type="text"],input[type="email"]{
+input[type=button], input[type=submit], input[type=text], input[type=email]{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
@@ -115,11 +115,11 @@ span.w3l-star {
     color: #c74184;
     line-height: 1;
 }
-.w3l-user input[type="text"] {
+.w3l-user input[type=text] {
     font-size: 15px;
     font-weight: 500;
     text-align: left;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     letter-spacing: 1px;
     box-sizing: border-box;
     border: none;
@@ -130,11 +130,11 @@ span.w3l-star {
     margin: 0px auto 10px;
     color: #000000;
 }
-.w3l-mail input[type="email"] {
+.w3l-mail input[type=email] {
     font-size: 15px;
     font-weight: 500;
     text-align: left;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     letter-spacing: 1px;
     box-sizing: border-box;
     border: none;
@@ -144,7 +144,7 @@ span.w3l-star {
     margin: 0px auto 10px;
     color:#000000;
 }
-.w3l-num input[type="text"] {
+.w3l-num input[type=text] {
     font-size: 15px;
     font-weight: 500;
     text-align: left;
@@ -241,7 +241,7 @@ ul li {
     width: 48%;
     margin-left: 4%;
 }
-.w3l-sym input[type="text"] {
+.w3l-sym input[type=text] {
     font-size: 15px;
     font-weight: 500;
     text-align: left;
@@ -308,7 +308,7 @@ label.w3l-head2 {
 	color: #3ce0b4;
     font-family: 'Poppins', sans-serif;
 }
-.btn input[type="submit"] {
+.btn input[type=submit] {
     font-size: 15px;
     font-weight: 500;
     text-align: center;
@@ -326,7 +326,7 @@ label.w3l-head2 {
 	background: #c74184;
 	font-family: 'Poppins', sans-serif;
 }
-.btn input[type="submit"]:hover{
+.btn input[type=submit]:hover{
 	background-color: #3ce0b4;
 }
 footer {
@@ -517,7 +517,7 @@ footer a:hover {
 	h1{
 		letter-spacing: 2px;
 	}
-	.btn input[type="submit"]{
+	.btn input[type=submit]{
 		width: 60%;
 	}
 }
@@ -585,7 +585,7 @@ footer a:hover {
 	.w3l-sym {
 		width: 100%;
     }
-	.btn input[type="submit"]{
+	.btn input[type=submit]{
 		width: 70%;
 	}
 }
@@ -599,7 +599,7 @@ footer a:hover {
 	h1 {
 		font-size: 25px;
 	}
-	.btn input[type="submit"] {
+	.btn input[type=submit] {
         width: 100%;
 	}
 }

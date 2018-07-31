@@ -1,0 +1,45 @@
+﻿
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript"
+            src="https://app.sandbox.midtrans.com/snap/snap.js"
+            data-client-key="SB-Mid-client-WXynYUJ5P5t6mKm6"></script>
+  </head>
+  <body>
+    <button id="pay-button">Pay!</button>
+    <script type="text/javascript">
+      var payButton = document.getElementById('pay-button');
+      payButton.addEventListener('click', function () {
+      var requestBody = 
+		{
+		  transaction_details: {
+		    gross_amount: 123000,
+		    // as example we use timestamp as order ID
+		    order_id: 'T-'+Math.round((new Date()).getTime() / 1000) 
+		  },  
+		  credit_card: {
+		    secure: true
+		  }
+		}
+		getSnapToken(requestBody, function(response){
+		  var response = JSON.parse(response);
+		  snap.pay(response.token);
+		})
+        //snap.pay('<SNAP_TOKEN>');
+      });
+      
+      function getSnapToken(requestBody, callback) {
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onreadystatechange = function() {
+		  if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+		    callback(xmlHttp.responseText);
+		  }
+		}
+		xmlHttp.open("post", "[YOUR_CHECKOUT.PHP_URL]");
+		xmlHttp.send(JSON.stringify(requestBody));
+		  }
+      
+    </script>
+  </body>
+</html>

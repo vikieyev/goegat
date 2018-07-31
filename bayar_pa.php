@@ -3,7 +3,14 @@ author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-
+<?php
+	session_start();
+	$numbers = range(100, 999);
+	shuffle($numbers);
+	//echo "Rp 15.$numbers[0]";
+	$_SESSION['harga_bayar'] = "15.$numbers[0]";
+	//var_dump($_SESSION);
+?>
 <?php
 if(isset($_POST['next_awal_mula_selisih']))
 {
@@ -15,6 +22,11 @@ if(isset($_POST['next_awal_mula_selisih']))
 	$_SESSION['tgl_puncak_selisih'] = $_POST['tgl_puncak_selisih'];
 	$_SESSION['tgl_pisah_ranjang'] = $_POST['tgl_pisah_ranjang'];
 	$_SESSION['txt_alasan_psh_ranjang'] = $_POST['txt_alasan_psh_ranjang'];
+	
+	//$numbers = range(1, 300);
+	//shuffle($numbers);
+	//echo $numbers;
+#var_dump($_SESSION);	
 }
 ?>
 
@@ -31,6 +43,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Meta tag Keywords -->
 <!-- css files -->
 <link rel="stylesheet" href="css/jquery-ui.css"/>
+<link rel="stylesheet" href="css/style_login.css" type="text/css" media="all">
+
 <link href="css/style_gugat_cerai.css" rel="stylesheet" type="text/css" media="all"/><!--stylesheet-css-->
 <link href="//fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><!--online-fonts-->
 <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><!--online-fonts-->
@@ -38,15 +52,21 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
 
 <body>
-	<h1>FORM PEMBAYARAN</h1>
+	<h1 class="title-agile text-center">FORM PEMBAYARAN</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
 		<form action="form_konfirmasi.php" method="post">	
-			<div class="w3l-user">
+			<div class="w3l-mail">
 				<label class="head">email anda</label>
-				<input type="text" name="email_user" placeholder="" required="" >
+				<input type="email" name="email_user" placeholder="" required="" >
 			</div>
 			<div class="clear"></div>
+			<div class="w3l-user">
+				<label class="head">no telepon anda</label>
+				<input type="text" name="no_tlp" placeholder="" required="" >
+			</div>
+			<div class="clear"></div>
+
 			
 			<div class="w3l-rem">
 					
@@ -56,17 +76,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			
 			<div class="clear"></div>
-			<div class="w3l-rem">
-					
-				<div class="btn">
-					<input type="submit" name="back" value="back" onClick="history.go(-1);"/>
-				</div>
-			</div>
-		</form>
-		
+					</form>
+		<div class="btn">
+					<input type="submit" name="back" value="back" onClick="history.back();"/>
+		</div>
 	</div>
 </div>
-	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>
+	<footer>&copy; 2018 PT.LawuSoft
 	</footer>
 	<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 

@@ -4,6 +4,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
+
 <?php
 if(isset($_POST['next_pilihan_pemohon']))
 {
@@ -42,15 +43,22 @@ if(isset($_POST['next_pilihan_pemohon']))
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Meta tag Keywords -->
 <!-- css files -->
+<link rel="stylesheet" href="css/style_login.css" type="text/css" media="all">
+
 <link rel="stylesheet" href="css/jquery-ui.css"/>
 <link href="css/style_gugat_cerai.css" rel="stylesheet" type="text/css" media="all"/><!--stylesheet-css-->
 <link href="//fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><!--online-fonts-->
 <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><!--online-fonts-->
 <!-- //css files -->
+<style type="text/css">
+.auto-style1 {
+	color: #FFFF00;
+}
+</style>
 </head>
 
 <body>
-	<h1>IDENTITAS PENGGUGAT</h1>
+	<h1 class="title-agile text-center">IDENTITAS PENGGUGAT</h1>
 <div class="w3l-main">
 	<div class="w3l-from">
 		<form action="form_identitas_tergugat_pn.php" method="post">	
@@ -150,7 +158,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<label class="head">status kawin</label>
 				<input type="text" name="status_kawin" placeholder="" required="">
 			</div>
-			-->
+		
 				
 			<div class="w3l-rem">
 					
@@ -159,13 +167,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 			</div>
 			<div class="clear"></div>
-			<div class="w3l-rem">
-					
-				<div class="btn">
-					<input type="submit" name="back" value="back" onClick="history.go(-1);"/>
-				</div>
-			</div>
-		</form>
+					</form>
+		<div class="btn">
+					<input type="submit" name="back" value="back" onClick="history.back();"/>
+		</div>
 		<!--
 		<form action="report_2.php" method="post" target="_blank">
 			<div class="btn" >
@@ -175,7 +180,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		-->
 	</div>
 </div>
-	<footer>&copy; 2017 modern appointment Form. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a>
+	<footer>&copy; 2018 PT.LawuSoft
 	</footer>
 	<!-- Default-JavaScript --> <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 
