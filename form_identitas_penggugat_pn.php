@@ -49,6 +49,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/style_gugat_cerai.css" rel="stylesheet" type="text/css" media="all"/><!--stylesheet-css-->
 <link href="//fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><!--online-fonts-->
 <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><!--online-fonts-->
+<link rel="stylesheet" href="css/style_login.css" type="text/css" media="all">
+
 <!-- //css files -->
 <style type="text/css">
 .auto-style1 {

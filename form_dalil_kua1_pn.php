@@ -56,11 +56,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Meta tag Keywords -->
 <!-- css files -->
 <link rel="stylesheet" href="css/jquery-ui.css"/>
-<link rel="stylesheet" href="css/style_login.css" type="text/css" media="all">
 
 <link href="css/style_gugat_cerai.css" rel="stylesheet" type="text/css" media="all"/><!--stylesheet-css-->
 <link href="//fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><!--online-fonts-->
 <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><!--online-fonts-->
+<link rel="stylesheet" href="css/style_login.css" type="text/css" media="all">
+
 <!-- //css files -->
 </head>
 

@@ -21,6 +21,7 @@ session_destroy();
 <head>
     <title>GOEGAT</title>
     <!-- Meta-Tags -->
+	<meta name="dicoding:email" content="yuslich.yan@gmail.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="keywords" content="Switch Login Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
@@ -128,6 +129,10 @@ session_destroy();
             <span lang="en-us"> </span> 
             <a href="mailto:goegat.rf.gd@gmail.com?subject=kesan">goegat.rf.gd@gmail.com</a>
         </p>
+         <p> 
+            <a href="http://legal24.rf.gd">layanan hukum lainnya (BETA) </a>
+        </p>
+
         <p> 
             <a href="KebijakanPrivasi.php">kebijakan privasi</a>
         </p>
