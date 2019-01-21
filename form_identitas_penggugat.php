@@ -167,7 +167,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<label class="head">status kawin</label>
 				<input type="text" name="status_kawin" placeholder="" required="">
 			</div>
-			-->
+			
 				
 			<div class="w3l-rem">
 					

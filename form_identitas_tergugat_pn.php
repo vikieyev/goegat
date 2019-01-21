@@ -199,7 +199,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<div class="clear"></div>
 			</div>
 			
-			-->	
+			
 			<div class="w3l-rem">
 					
 				<div class="btn">
